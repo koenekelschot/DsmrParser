@@ -1,16 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard1.3;net45;net46;net47</TargetFrameworks>
     <Company>Koen Ekelschot</Company>
     <Authors>peckham</Authors>
     <RepositoryUrl>https://github.com/peckham/DsmrParser</RepositoryUrl>
     <Copyright>Copyright ©  2017</Copyright>
     <Description>Package for Dutch Smart Meters which comply to DSMR (Dutch Smart Meter Requirements), also known as ‘Slimme meter’ or ‘P1 poort’. Support parsing DSMR V2.2 and V4.</Description>
     <PackageTags>DSMR, P1, Slimme meter,  Dutch Smart Meters</PackageTags>
+    <PackageReleaseNotes>Updated targetframeworks</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.3'">
     <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />
   </ItemGroup>
 
